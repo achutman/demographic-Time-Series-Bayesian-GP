@@ -19,12 +19,12 @@ class timeSeriesModelGPyDiff(object):
     '''
     def __init__(self, pValue = 0.05, X=[], Y1=[], Y2=[], deltaMuPost = [], deltaCovPost = [], xCIleft = [], xCIright = []):
         '''
-        Initializes parameters for stacked denoising autoencoders
-        @param pValue: number of layers, i.e., number of autoencoders to stack on top of each other.
-        @param deltaMuPost: list with the number of hidden nodes per layer. If only one value specified, same value is used for all the layers
-        @param deltaCovPost: list with the proportion of data_in nodes to mask at each layer. If only one value is provided, all the layers share the value.
-        @param xCIleft: list with activation function for encoders at each layer. Typically sigmoid.
-        @param xCIright: list with activation function for decoders at each layer. Typically the same as encoder for binary data_in, linear for real data_in.
+        Initializes parameters for timeSeriesModelGPyDiff
+        @param pValue: pValue for computing statistical test
+        @param deltaMuPost: Difference in the GP estimated mean vectors
+        @param deltaCovPost: Difference in the GP estimated covariance matrices
+        @param xCIleft: Confidence interval of the estimated difference (lower bound)
+        @param xCIright: Confidence interval of the estimated difference (upper bound)
         '''
         self.pValue = pValue
         self.X = X 
