@@ -17,15 +17,15 @@ class timeSeriesModelGPy(object):
     '''
     def __init__(self, kernel = GPy.kern.Matern32(input_dim=1), num_restarts=10, pValue = 0.05, mu = [], cov = [], var = [], xCIleft = [], xCIright = []):
         '''
-        Initializes parameters for stacked denoising autoencoders
-        @param kernel: number of layers, i.e., number of autoencoders to stack on top of each other.
-        @param num_restarts: list with the number of hidden nodes per layer. If only one value specified, same value is used for all the layers
-        @param pValue: list with the proportion of data_in nodes to mask at each layer. If only one value is provided, all the layers share the value.
-        @param mu: list with activation function for encoders at each layer. Typically sigmoid.
-        @param cov: list with activation function for decoders at each layer. Typically the same as encoder for binary data_in, linear for real data_in.
-        @param var: True to use bias value.
-        @param xCIleft: The loss function. Typically 'mse' is used for real values. Options can be found here: https://keras.io/objectives/ 
-        @param xCIright: mini batch size for gradient update
+        Initializes parameters for timeSeriesModelGPy
+        @param kernel: GPy kernel
+        @param num_restarts: num of restarts during GP optimization
+        @param pValue: pValue to compute statistical tetst
+        @param mu: GP estimated mean
+        @param cov: GP estimated covariace
+        @param var: GP estimated variance
+        @param xCIleft: GP estimated confidence interval lower bound
+        @param xCIright: GP estimated confidence interval upper bound
         '''
         self.kernel = kernel
         self.num_restarts = num_restarts
