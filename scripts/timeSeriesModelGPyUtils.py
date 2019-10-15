@@ -2,9 +2,10 @@
 """
 Created on Tue Oct 15 12:17:35 2019
 
+Additional modules used in other scripts.
+
 @author: engs1602
 """
-#cd C:\Users\engs1602\research\codes\github\demographicTimeSeriesBayesianGPy
 from scipy import stats
 import matplotlib.pyplot as pp
 from numpy import concatenate
