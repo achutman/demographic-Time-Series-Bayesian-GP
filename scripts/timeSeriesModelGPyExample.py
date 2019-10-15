@@ -5,7 +5,7 @@ Created on Tue Oct 15 11:13:40 2019
 @author: engs1602
 
 """
-#cd C:\Users\engs1602\research\codes\github\scripts\demographicTimeSeriesBayesianGPy
+#cd .../github/scripts/demographicTimeSeriesBayesianGPy
 from timeSeriesModelGPy import timeSeriesModelGPy
 from timeSeriesModelGPyDiff import timeSeriesModelGPyDiff
 from timeSeriesModelGPyUtils import concatenate_GP_outputs_Pre_Post
@@ -17,8 +17,8 @@ import GPy
 #import pylab as pb
 #from sklearn.preprocessing import StandardScaler
 
-# Load data
-data = pd.read_csv(r'C:\Users\engs1602\research\codes\github\demographicTimeSeriesBayesianGPy\data\intCountsIoOiNormPerYr.csv')
+# Set path and load data
+data = pd.read_csv(r'.../github/demographicTimeSeriesBayesianGPy/data/intCountsIoOiNormPerYr.csv')
 data = data.set_index('year')
 
 # Plot data
@@ -92,8 +92,8 @@ plot_GP_models_Pre_Post(dataOut)
 # Plot difference in GPs PRE vs POST simultaneously
 plot_GP_diff_Pre_Post(dataOut)
 
-# Save outputs
-#pathToSave = r'C:\Users\engs1602\research\meetings\REACH\20180321EmbankmentOutIn\min\dataPlots'
+# Set path and save outputs
+#pathToSave = r'.../github/demographicTimeSeriesBayesianGPy/data/outputs'
 #data.to_csv(os.path.join(pathToSave,'GPvarIoModelOutputsPrePostEmbank.csv'))
 
 # Save outputs                         
